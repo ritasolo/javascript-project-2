@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project 2</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway+Dots" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="animations.css">
+</head>
+<style>
+	html {
+		font-size: 62.5%;
+	}
+
+	body,html {
+		margin:0;
+		padding:0;
+	}
+	
+	body {
+		font-family: 'Josefin Sans', sans-serif;
+		background-color: #ECE8E0;
+		text-align: center;
+	}
+
+	.hide {
+		visibility: hidden;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.container {
+		margin: 0 auto;
+		margin-top: 10rem;
+		width: 100%;
+		padding: 2rem 0;
+	}
+
+	 #movement, #feeling, #length {
+		display: flex;
+		text-align: left;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#question {
+		width: 40%;
+		/*display: flex;*/
+		text-align: right;
+	}
+
+	#answer {
+		margin: 0 2rem;
+	}
+
+
+	#chillForm {
+		display: flex;
+		font-size: 1.6rem;
+		padding: 2rem 0;
+		margin-right: 3rem;
+	}
+
+	h2 {
+		color: black;
+		margin: 0;
+		font-size: 3rem;
+		background-image: linear-gradient(#ECE8E0 78%, #fde231 22%);
+	}
+
+	p {
+		font-size: 1.6rem;
+		margin: 0;
+	}
+
+	:checked + label {
+	   color: #c631fd;
+	}
+
+	footer {
+		text-align: center;
+		margin-bottom: 2rem;
+		width: 100%;
+		position:absolute;
+		bottom:0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #c631fd;
+	}
+
+	img {
+		width: 29rem;
+		margin-top: 4rem;
+		position: relative;
+		top: -10rem;
+		left: 1rem;
+		z-index: 5;
+	}
+
+	.circle {
+		border-radius: 50%;
+		width: 15rem;
+		height: 15rem; 
+		position: absolute;
+		z-index: 1;
+		background-color: #fde231;
+		left: 46%;
+		top: 14.5%;
+	}
+
+
+	form input {
+		margin-bottom: 2rem;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+
+	#up button {
+		display: inline-block;
+		position: relative;
+		margin: 0;
+		padding: 3rem 0;
+	}
+
+	#up h2 {
+		padding: 1.5rem 4rem;
+		background-image: none;
+	}
+
+	.submitButton, .resetButton {
+		border: 0;
+		background-color: white;
+		display: inline-block;
+		font-size: 2rem;
+		padding: 1rem 2rem;
+		font-weight: bold;
+		background-color: #fde231;
+		text-align: center;
+		margin: 0;
+		font-family: 'Josefin Sans', sans-serif;
+	} 
+
+	.resetButton {
+		margin-top: 2rem;
+	}
+
+	#chillOption {
+		width: 100vw;
+		height: 78vh;
+		z-index: 10;
+	}
+</style>
+
+<body>
+
+<div id="chillOption" class="hidden">
+</div>
+
+<div class="container">
+	<div class="circle"></div>
+	<a href="#"><img id="mainImage" src="images/noun_1325492_cc copy.png" alt="" class="pulse"></a>
+	<form action="" id="chillForm">
+		<div id="feeling" class="hide">
+			<div id="question">
+				<h2>how you feeling?</h2>
+			</div>
+
+			<div id="answer">
+				<input type="radio" id="lethargic" name="feel" value="lethargic">
+				<label for="lethargic">lethargic / depressed</label>
+				
+				<br><input type="radio" id="anxious" name="feel" value="anxious">
+				<label for="anxious">anxious / scattered</label>
+
+				<br><input type="radio" id="stressed" name="feel" value="stressed">
+				<label for="stressed">stressed / wired</label>
+			</div>
+		</div>
+
+		<div id="movement" class="hide">
+			<div id="question">
+				<h2>what kind of flow?</h2>	
+			</div>
+
+			<div id="answer">
+				<input type="radio" id="sit" name="movement" value="sit">
+				<label for="sit">sitting or lying down</label>
+
+				<br><input type="radio" id="moveSlow" name="movement" value="moveSlow">
+				<label for="moveSlow">moving slow</label>
+
+				<br><input type="radio" id="moveFast" name="movement" value="moveFast">
+				<label for="moveFast">moving fast</label>
+			</div>
+		</div>
+
+		<div id="length" class="hide">
+			<div id="question">
+				<h2>how much time you got?</h2>
+			</div>
+
+			<div id="answer">
+				<input type="radio" id="short" name="length" value="short">
+				<label for="short">10-20 minutes</label>
+
+				<br><input type="radio" id="long" name="length" value="long">
+				<label for="long">30 minutes or more</label>
+			</div>
+		</div>
+	
+</div>
+<div class="buttonDiv">
+	<input type="submit" value="chillllll" class="submitButton hide">
+	<!-- <input type="reset" value="redo" class="resetButton hide"> -->
+</div>
+
+<footer>
+<p>art by <a href="https://thenounproject.com/shalfdesign/">Arafat Uddin</a></p>
+</footer>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+<script>
+	
+	$(function() {
+	console.log("ready!");
+	 $(".circle").hide();
+	 $('form').on('submit', function(event) {
+		event.preventDefault();
+		$('#chillOption').removeClass('hidden');
+		$('.container').addClass('hidden');
+		$('img').addClass('hidden');
+		$('.buttonDiv').html(`<input type="reset" value="redo" class="resetButton">`);
+    	const userFeel = $('input[name=feel]:checked').val();
+    	const userMovement = $('input[name=movement]:checked').val();
+    	const userLength = $('input[name=length]:checked').val();
+  		
+  		if (userFeel === 'lethargic' && userMovement === 'sit' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/HpHKf4tlvFw"></iframe>`)
+		} else if (userFeel === 'lethargic' && userMovement === 'moveSlow' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/bofQabiS3C4"></iframe>`)
+		} else if (userFeel === 'lethargic' && userMovement === 'moveFast' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/sirRG5zJ4K8"></iframe>`)
+  		} else if (userFeel === 'anxious' && userMovement === 'sit' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/MRrWiebVQmI"></iframe>`)
+		} else if (userFeel === 'anxious' && userMovement === 'moveSlow' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/PaA7c0dZ1DI"></iframe>`)
+		} else if (userFeel === 'anxious' && userMovement === 'moveFast' && userLength === 'long') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/hJbRpHZr_d0"></iframe>`)
+  		} else if (userFeel === 'stressed' && userMovement === 'sit' && userLength === 'long') {
+    			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/CNgNzunfSSE"></iframe>`)
+   		} else if (userFeel === 'stressed' && userMovement === 'moveSlow' && userLength === 'long') {
+     			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/pU8V70yRW-w"></iframe>`)
+     	} else if (userFeel === 'stressed' && userMovement === 'moveFast' && userLength === 'long') {
+     			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/tE70XhKhWMM"></iframe>`) 
+     	} else if (userFeel === 'lethargic' && userMovement === 'sit' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/Ltm9oqT_7Kg"></iframe>`)
+		} else if (userFeel === 'lethargic' && userMovement === 'moveSlow' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/Sxddnugwu-8"></iframe>`)
+		} else if (userFeel === 'lethargic' && userMovement === 'moveFast' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/D9q5WsMk4ro"></iframe>`)
+  		} else if (userFeel === 'anxious' && userMovement === 'sit' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/xoYnqvadurg"></iframe>`)
+		} else if (userFeel === 'anxious' && userMovement === 'moveSlow' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/Enz98dDXQfY""></iframe>`)
+		} else if (userFeel === 'anxious' && userMovement === 'moveFast' && userLength === 'short') {
+  			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/shahRHIpjeo"></iframe>`)
+  		} else if (userFeel === 'stressed' && userMovement === 'sit' && userLength === 'short') {
+    			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/GEkJMRDhvsw"></iframe>`)
+   		} else if (userFeel === 'stressed' && userMovement === 'moveSlow' && userLength === 'short') {
+     			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/OfO6BZb6A7Q"></iframe>`)
+     	} else if (userFeel === 'stressed' && userMovement === 'moveFast' && userLength === 'short') {
+     			$('#chillOption').html(`<iframe src="https://www.youtube.com/embed/2KImAarOceI"></iframe>`)
+
+		} else {
+			console.log("error")
+		}
+
+		$('.resetButton').click(function (){
+	  		 location.reload();
+		});
+
+    	$('iframe').removeClass('hidden');
+    	$('#chillOption').addClass('slideUp');
+    	$('#up').removeClass('hide');
+
+	});
+
+	$( document ).on( 'keydown', function ( e ) {
+	    if ( e.keyCode === 27 ) { 
+	        $('#chillOption').hide();
+	        location.reload();
+	    }
+	});	
+
+	$('img').click(function (){
+    	$('#feeling').removeClass('hide');
+    	$('#feeling').addClass("slideRight");
+    	$(".circle").delay(200).fadeIn(2000); 
+    });
+
+	$('#feeling input').click(function (){
+    	$('#movement').removeClass('hide');
+    	$('#movement').addClass("slideUp");
+
+    });
+
+    $('#movement input').click(function (){
+    	$('#length').removeClass('hide');
+    	$('#length').addClass("slideLeft");
+    });
+
+    $('#length input').click(function (){
+    	$('.submitButton').removeClass('hide');
+    	$('.submitButton').addClass("slideUp");
+    });
+
+});
+
+</script>
+
+</body>
+</html>
