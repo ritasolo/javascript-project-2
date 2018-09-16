@@ -1,0 +1,189 @@
+html {
+	font-size: 62.5%;
+}
+
+body, html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #ECE8E0;
+	text-align: center;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 7rem;
+	padding: 1rem 3rem;
+	margin-right: 1rem;
+}
+
+h2 {
+	color: black;
+	margin: 0;
+	font-size: 3rem;
+	background-image: linear-gradient(#ECE8E0 88%, #fde231 22%);
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+#hello h2 {
+	font-size: 2.5rem;
+	margin: 0;
+	text-align: left;
+	line-height: 3rem;
+	background-image: none;
+}
+
+#movement, #feeling, #length {
+	display: flex;
+	text-align: left;
+	align-items: center;
+	justify-content: center;
+}
+
+#question {
+	width: 45%;
+	text-align: right;
+}
+
+#answer {
+	margin: 0 2rem;
+}
+
+
+#chillForm {
+	display: flex;
+	font-size: 1.6rem;
+	padding: 2rem 0;
+	margin-right: 3rem;
+}
+
+#hello {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: -2.5rem;
+
+}
+
+#chillOption {
+	width: 100vw;
+	height: 80vh;
+	z-index: 10;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.go {
+	top: -1rem;
+	left: 6rem;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	padding: 2rem 0;
+}
+
+a {
+	text-decoration: none;
+	color: #c631fd;
+}
+
+img {
+	width: 29rem;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	position: relative;
+	z-index: 5;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 14.5rem;
+	height: 14.5rem; 
+	position: absolute;
+	z-index: 1;
+	background-color: #fde231;
+	left: 45.5%;
+	top: 15%;
+}
+
+form input {
+	margin-bottom: 2rem;
+}
+
+input[type=radio] {
+  	display: none;
+}
+
+input[type=radio] + label {
+	background: url('https://use.fontawesome.com/releases/v5.0.13/svgs/regular/circle.svg') left top no-repeat;
+	display: block;
+	max-height: 2rem;
+	padding-left: 3.5rem;
+	padding-top: 0.5rem;
+}
+
+input[type=radio]:checked + label {
+	background: url('https://use.fontawesome.com/releases/v5.0.13/svgs/regular/check-circle.svg') left top no-repeat;
+}
+
+:checked + label {
+	color: #c631fd;
+}
+
+.submitButton, .resetButton, button {
+	border: 0;
+	border-radius: 1;
+	position: relative;
+	top: 3.5rem;
+	display: inline-block;
+	font-size: 3rem;
+	padding: 1rem 2rem;
+	padding-bottom: 0;
+	font-weight: bold;
+	background-color: #ECE8E0;
+	border-bottom: 15px solid #fde231;
+	text-align: center;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+} 
+
+.okayButton {
+	top: 0;
+}
+
+.resetButton {
+	margin-top: 1rem;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 2rem;
+	width: 100%;
+	position:absolute;
+	bottom:0;
+}
